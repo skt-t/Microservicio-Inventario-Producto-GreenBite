@@ -10,7 +10,6 @@ import java.util.List;
 @RequestMapping("/api/productos")
 public class ProductoController {
 
-    // Ahora nos comunicamos con el Servicio, NO con el Repositorio
     private final ProductoService service;
 
     public ProductoController(ProductoService service) {
@@ -25,5 +24,11 @@ public class ProductoController {
     @PostMapping
     public Producto crearProducto(@RequestBody Producto producto) {
         return service.guardarProducto(producto);
+    }
+
+    // AGREGA ESTO: Endpoint para obtener absolutamente todos los productos
+    @GetMapping
+    public List<Producto> listarTodos() {
+        return service.listarTodos();
     }
 }
