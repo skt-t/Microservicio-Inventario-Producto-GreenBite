@@ -1,0 +1,6 @@
+com/greenbite/inventario/model/Producto.class
+com/greenbite/inventario/service/ProductoService.class
+com/greenbite/inventario/App.class
+com/greenbite/inventario/repository/ProductoRepository.class
+com/greenbite/inventario/model/Producto$ProductoBuilder.class
+com/greenbite/inventario/controller/ProductoController.class
