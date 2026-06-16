@@ -23,8 +23,8 @@ public class ProductoService {
         return repository.save(producto);
     }
 
-    // AGREGA ESTO: Lógica para devolver todo el catálogo
+    // El método que el test estaba buscando a gritos
     public List<Producto> listarTodos() {
-        return repository.findAll(); // findAll() ya viene regalado por JpaRepository
+        return repository.findAll();
     }
 }
