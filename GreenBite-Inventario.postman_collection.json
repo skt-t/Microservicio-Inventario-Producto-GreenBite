@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "GreenBite - Microservicio Inventario",
+    "description": "Colección de pruebas para el microservicio de inventario (Evaluación Parcial 3).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Crear Producto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Tomate perita\",\n  \"descripcion\": \"Tomate fresco de temporada\",\n  \"precio\": 1200.00,\n  \"stock\": 100,\n  \"categoria\": \"Verduras\",\n  \"imagenUrl\": \"https://ejemplo.com/tomate.png\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/productos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "productos"]
+        }
+      }
+    },
+    {
+      "name": "2. Listar Catálogo Completo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/productos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "productos"]
+        }
+      }
+    },
+    {
+      "name": "3. Buscar Producto",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/productos/buscar?nombre=tomate",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "productos", "buscar"],
+          "query": [
+            {
+              "key": "nombre",
+              "value": "tomate"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
